@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
 import avatar from "../Utils/me2.jpg";
@@ -66,7 +66,7 @@ const Navbar = () => {
               }}
             >
               <Link
-                to="/"
+                to="hero"
                 style={{
                   textDecoration: "none",
                   display: "flex",
@@ -96,7 +96,7 @@ const Navbar = () => {
                 alignItems: "center",
               }}
             >
-              <Link to="/arts">
+              <Link to="skill">
                 <Button
                   color="primary"
                   variant="text"
@@ -107,35 +107,39 @@ const Navbar = () => {
                     fontFamily: "sora,sans-serif",
                   }}
                 >
-                  About
+                  Skill
                 </Button>
               </Link>
-              <Button
-                color="primary"
-                variant="text"
-                size="small"
-                to="/category"
-                sx={{
-                  color: "black",
-                  fontWeight: "light",
-                  fontFamily: "sora,sans-serif",
-                }}
-              >
-                Projects
-              </Button>
-              <Button
-                color="primary"
-                variant="text"
-                size="small"
-                to="/about"
-                sx={{
-                  color: "black",
-                  fontWeight: "light",
-                  fontFamily: "sora,sans-serif",
-                }}
-              >
-                Contact
-              </Button>
+              <Link to="projects">
+                <Button
+                  color="primary"
+                  variant="text"
+                  size="small"
+                  to="/category"
+                  sx={{
+                    color: "black",
+                    fontWeight: "light",
+                    fontFamily: "sora,sans-serif",
+                  }}
+                >
+                  Projects
+                </Button>
+              </Link>
+              <Link to="Contact">
+                <Button
+                  color="primary"
+                  variant="text"
+                  size="small"
+                  to="/about"
+                  sx={{
+                    color: "black",
+                    fontWeight: "light",
+                    fontFamily: "sora,sans-serif",
+                  }}
+                >
+                  Contact
+                </Button>
+              </Link>
             </Box>
           </Toolbar>
         </Container>
