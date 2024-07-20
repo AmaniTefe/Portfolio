@@ -30,7 +30,8 @@ const HeroSection = () => {
               fontWeight: 700,
               marginBottom: 2,
               color: "black",
-              textAlign: "right",
+              textAlign: "left",
+              ml: "24%",
             }}
           >
             Hi! I am{" "}
@@ -54,12 +55,12 @@ const HeroSection = () => {
               marginBottom: 4,
               color: "gray",
               textAlign: "left",
-              ml: "26%",
+              ml: "24%",
             }}
           >
-            I’m a Full Stack Developer who loves turning complex problems into
+            I'm a Full Stack Developer who loves turning complex problems into
             smooth, user-friendly solutions. Passionate about both the design
-            and code, I’m all about creating amazing web experiences that make
+            and code, I'm all about creating amazing web experiences that make
             life a little easier and a lot more fun.
           </Typography>
         </Grid>

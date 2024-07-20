@@ -2,8 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import Navbar from "./components/navBar";
 import HeroSection from "./components/Hero";
-import Skill from "./components/About";
-
+import Skill from "./components/skill";
 function App() {
   return (
     <Box>

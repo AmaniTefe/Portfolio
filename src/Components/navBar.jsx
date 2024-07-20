@@ -96,7 +96,7 @@ const Navbar = () => {
                 alignItems: "center",
               }}
             >
-              <Link to="skill">
+              <Link smooth={true} duration={700} offset={-70} to="skill">
                 <Button
                   color="primary"
                   variant="text"
@@ -110,7 +110,7 @@ const Navbar = () => {
                   Skill
                 </Button>
               </Link>
-              <Link to="projects">
+              <Link smooth={true} duration={700} offset={-70} to="projects">
                 <Button
                   color="primary"
                   variant="text"
@@ -125,7 +125,7 @@ const Navbar = () => {
                   Projects
                 </Button>
               </Link>
-              <Link to="Contact">
+              <Link smooth={true} duration={700} offset={-70} to="Contact">
                 <Button
                   color="primary"
                   variant="text"
