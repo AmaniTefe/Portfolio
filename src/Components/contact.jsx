@@ -215,12 +215,12 @@ const Contact = () => {
             </IconButton>
           </Stack>
           <Box sx={{ display: "flex", ml: 1.3 }}>
-            <CopyrightIcon sx={{ color: "black" }} />
+            <CopyrightIcon sx={{ color: "gray" }} />
             <Typography
               sx={{
                 fontFamily: "Sora, sans-serif",
                 fontSize: "inherit",
-                color: "black",
+                color: "gray",
                 textAlign: "center",
                 fontWeight: "light",
                 ml: 0.2,
