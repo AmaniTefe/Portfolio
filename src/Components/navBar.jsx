@@ -66,6 +66,9 @@ const Navbar = () => {
               }}
             >
               <Link
+                smooth={true}
+                duration={700}
+                offset={-70}
                 to="hero"
                 style={{
                   textDecoration: "none",
@@ -125,7 +128,7 @@ const Navbar = () => {
                   Projects
                 </Button>
               </Link>
-              <Link smooth={true} duration={700} offset={-70} to="Contact">
+              <Link smooth={true} duration={900} offset={-70} to="Contacts">
                 <Button
                   color="primary"
                   variant="text"

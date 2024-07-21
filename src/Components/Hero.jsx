@@ -2,6 +2,14 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import me from "../Utils/me.jpg";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import EmailIcon from "@mui/icons-material/Email";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import TwitterIcon from "@mui/icons-material/X";
+import TelegramIcon from "@mui/icons-material/Telegram";
 
 const HeroSection = () => {
   return (
@@ -11,7 +19,7 @@ const HeroSection = () => {
         paddingY: 24,
         textAlign: "center",
         color: "#ffffff",
-        background: "linear-gradient(to right, white 71%, #177BD1 29%)",
+        background: "linear-gradient(45deg, white 71%, #177BD1 29%)",
       }}
     >
       <Grid
@@ -31,7 +39,7 @@ const HeroSection = () => {
               marginBottom: 2,
               color: "black",
               textAlign: "left",
-              ml: "24%",
+              ml: "21%",
             }}
           >
             Hi! I am{" "}
@@ -52,10 +60,9 @@ const HeroSection = () => {
             variant="body1"
             color="textSecondary"
             sx={{
-              marginBottom: 4,
               color: "gray",
               textAlign: "left",
-              ml: "24%",
+              ml: "21%",
             }}
           >
             I'm a Full Stack Developer who loves turning complex problems into
@@ -63,6 +70,73 @@ const HeroSection = () => {
             and code, I'm all about creating amazing web experiences that make
             life a little easier and a lot more fun.
           </Typography>
+          <Box sx={{ mt: 2, mr: "10%" }}>
+            <Stack
+              direction="row"
+              justifyContent="left"
+              spacing={1}
+              useFlexGap
+              sx={{
+                color: "text.secondary",
+                ml: "22%",
+              }}
+            >
+              <IconButton
+                color="inherit"
+                href="https://github.com/AmaniTefe"
+                aria-label="GitHub"
+                sx={{ alignSelf: "center" }}
+                target="_blank"
+              >
+                <FacebookIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                href="https://x.com/dev_amanijs"
+                aria-label="X"
+                sx={{ alignSelf: "center" }}
+                target="_blank"
+              >
+                <TwitterIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                href="https://www.linkedin.com/in/amanuel-teferais/"
+                aria-label="LinkedIn"
+                sx={{ alignSelf: "center" }}
+                target="_blank"
+              >
+                <LinkedInIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                href="https://www.instagram.com/amani.tefera"
+                aria-label="LinkedIn"
+                sx={{ alignSelf: "center" }}
+                target="_blank"
+              >
+                <InstagramIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                href="mailto:s.tefera.amanuel@gmail.com"
+                aria-label="LinkedIn"
+                sx={{ alignSelf: "center" }}
+                target="_blank"
+              >
+                <EmailIcon />
+              </IconButton>
+              <IconButton
+                color="inherit"
+                href="https://t.me/kellyness"
+                aria-label="LinkedIn"
+                sx={{ alignSelf: "center" }}
+                target="_blank"
+              >
+                <TelegramIcon />
+              </IconButton>
+            </Stack>
+          </Box>
         </Grid>
         <Grid item xs={12} md={6}>
           <Box
