@@ -83,7 +83,7 @@ const Project = () => {
               variant="h5"
               component="div"
             >
-              Web Based Court Informtaion Management System
+              Web Based Court Informstion Management System
             </Typography>
             <Typography
               sx={{ fontFamily: "Sora, sans-serif", textAlign: "left" }}
