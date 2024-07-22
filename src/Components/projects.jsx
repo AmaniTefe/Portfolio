@@ -5,6 +5,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Backup from "../Utils/backup.jpg";
+import Sentimental from "../Utils/sentimental.jpg";
+import fase_recognition from "../Utils/facial_recognition.jpg";
+import cims from "../Utils/cims.jpg";
 const Project = () => {
   return (
     <Box
@@ -42,8 +46,8 @@ const Project = () => {
       <Box gap={3} sx={{ display: "flex", mt: 3 }}>
         <Card sx={{ maxWidth: 345, display: "flex", flexDirection: "column" }}>
           <CardMedia
-            sx={{ height: 140 }}
-            image="/static/images/cards/contemplative-reptile.jpg"
+            sx={{ height: 170 }}
+            image={Sentimental}
             title="green iguana"
           />
           <CardContent>
@@ -61,21 +65,23 @@ const Project = () => {
               color="gray"
             >
               Trains and Analyzes the dataset then ditermines whether the tweets
-              are Positive, Negative or Neutral. done using python.
+              are Positive, Negative or Neutral. Built using python and python
+              libraries like numpy, nltk, wordcloud and many more.
             </Typography>
           </CardContent>
           <CardActions sx={{ marginTop: "auto" }}>
-            <Button sx={{ alignItems: "end" }} size="small">
+            <Button
+              sx={{ alignItems: "end" }}
+              size="small"
+              href="https://github.com/AmaniTefe/Sentimental-Analysis-using-Twitter-dataset"
+              target="_blank"
+            >
               GIT Repo
             </Button>
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 345, display: "flex", flexDirection: "column" }}>
-          <CardMedia
-            sx={{ height: 140 }}
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="green iguana"
-          />
+          <CardMedia sx={{ height: 170 }} image={cims} title="green iguana" />
           <CardContent>
             <Typography
               sx={{ fontFamily: "Sora, sans-serif" }}
@@ -83,7 +89,7 @@ const Project = () => {
               variant="h5"
               component="div"
             >
-              Web Based Court Informstion Management System
+              Web Based Court Information Management System
             </Typography>
             <Typography
               sx={{ fontFamily: "Sora, sans-serif", textAlign: "left" }}
@@ -102,11 +108,7 @@ const Project = () => {
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 345, display: "flex", flexDirection: "column" }}>
-          <CardMedia
-            sx={{ height: 140 }}
-            image="/static/images/cards/contemplative-reptile.jpg"
-            title="green iguana"
-          />
+          <CardMedia sx={{ height: 170 }} image={Backup} title="Backup" />
           <CardContent>
             <Typography
               sx={{ fontFamily: "Sora, sans-serif" }}
@@ -128,15 +130,20 @@ const Project = () => {
             </Typography>
           </CardContent>
           <CardActions sx={{ marginTop: "auto" }}>
-            <Button sx={{ alignItems: "end" }} size="small">
+            <Button
+              sx={{ alignItems: "end" }}
+              size="small"
+              href="https://github.com/AmaniTefe/Executable-Script-for-Automated-MySQL-Database-Backups"
+              target="_blank"
+            >
               GIT Repo
             </Button>
           </CardActions>
         </Card>
         <Card sx={{ maxWidth: 345, display: "flex", flexDirection: "column" }}>
           <CardMedia
-            sx={{ height: 140 }}
-            image="/static/images/cards/contemplative-reptile.jpg"
+            sx={{ height: 170 }}
+            image={fase_recognition}
             title="green iguana"
           />
           <CardContent>
@@ -155,14 +162,15 @@ const Project = () => {
             >
               A face recognition system that accurately identifies individuals
               using the available camera, after being trained with photos of the
-              subjects along with their names.
+              subjects along with their names. Built using python and python
+              libraries like cv2 and re.
             </Typography>
           </CardContent>
           <CardActions sx={{ marginTop: "auto" }}>
             <Button
               sx={{ alignItems: "end" }}
               size="small"
-              href="https://github.com/henok1111/fullproject"
+              href="https://github.com/AmaniTefe/Real-Time-Face-Recognition-System"
               target="_blank"
             >
               GIT Repo

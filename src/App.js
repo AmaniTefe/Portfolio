@@ -5,9 +5,19 @@ import HeroSection from "./components/Hero.jsx";
 import Skill from "./components/skill.jsx";
 import Project from "./components/projects.jsx";
 import Contact from "./components/contact.jsx";
+import Favicon from "react-favicon";
+import { useState } from "react";
+import icon from "./Utils/favicon.png";
 function App() {
+  const [faviconUrl, setFaviconUrl] = useState(`${icon}`);
+
+  const toggleFavicon = () => {
+    setFaviconUrl((prevUrl) => (prevUrl === `${icon}` ? `${icon}` : `${icon}`));
+  };
+
   return (
     <Box>
+      <Favicon url={faviconUrl} />
       <Navbar />
       <HeroSection />
       <Skill />
