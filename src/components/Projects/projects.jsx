@@ -5,10 +5,10 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import Backup from "../Utils/backup.jpg";
-import Sentimental from "../Utils/sentimental.jpg";
-import fase_recognition from "../Utils/facial_recognition.jpg";
-import cims from "../Utils/cims.jpg";
+import Backup from "../../Utils/backup.jpg";
+import Sentimental from "../../Utils/sentimental.jpg";
+import fase_recognition from "../../Utils/facial_recognition.jpg";
+import cims from "../../Utils/cims.jpg";
 const Project = () => {
   return (
     <Box

@@ -9,7 +9,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-scroll";
 import { Typography } from "@mui/material";
 import Avatar from "@mui/material/Avatar";
-import avatar from "../Utils/me2.jpg";
+import avatar from "../../Utils/me2.jpg";
 
 const Navbar = () => {
   return (

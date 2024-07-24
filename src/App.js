@@ -1,10 +1,10 @@
 import React from "react";
 import { Box } from "@mui/material";
-import Navbar from "./components/navBar.jsx";
-import HeroSection from "./components/Hero.jsx";
-import Skill from "./components/skill.jsx";
-import Project from "./components/projects.jsx";
-import Contact from "./components/contact.jsx";
+import Navbar from "./components/NavBar/navBar.jsx";
+import HeroSection from "./components/Hero/Hero.jsx";
+import Skill from "./components/skill/skill.jsx";
+import Project from "./components/Projects/projects.jsx";
+import Contact from "./components/Contacts/contact.jsx";
 import Favicon from "react-favicon";
 import { useState } from "react";
 import icon from "./Utils/favicon.png";

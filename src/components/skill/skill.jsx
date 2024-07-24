@@ -3,15 +3,15 @@ import { Box, Typography } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 
-import react from "../Utils/react.png";
-import html from "../Utils/html.png";
-import javascript from "../Utils/javascript.png";
-import css from "../Utils/css.png";
-import nodejs from "../Utils/nodejs.png";
-import mongo from "../Utils/mongo.png";
-import sql from "../Utils/sql.png";
-import python from "../Utils/python.png";
-import php from "../Utils/php.png";
+import react from "../../Utils/react.png";
+import html from "../../Utils/html.png";
+import javascript from "../../Utils/javascript.png";
+import css from "../../Utils/css.png";
+import nodejs from "../../Utils/nodejs.png";
+import mongo from "../../Utils/mongo.png";
+import sql from "../../Utils/sql.png";
+import python from "../../Utils/python.png";
+import php from "../../Utils/php.png";
 
 const Skill = () => {
   const DemoPaper = styled(Paper)(({ theme }) => ({
