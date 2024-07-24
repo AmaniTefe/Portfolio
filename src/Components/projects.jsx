@@ -102,7 +102,12 @@ const Project = () => {
             </Typography>
           </CardContent>
           <CardActions sx={{ marginTop: "auto" }}>
-            <Button sx={{ alignItems: "end" }} size="small">
+            <Button
+              sx={{ alignItems: "end" }}
+              size="small"
+              href="https://github.com/AmaniTefe/CIMS"
+              target="_blank"
+            >
               GIT Repo
             </Button>
           </CardActions>
