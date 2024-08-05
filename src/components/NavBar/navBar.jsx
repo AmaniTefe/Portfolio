@@ -1,152 +1,114 @@
-import React from "react";
-import Box from "@mui/material/Box";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
-import Container from "@mui/material/Container";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
-import { Typography } from "@mui/material";
-import Avatar from "@mui/material/Avatar";
+import { FiMenu } from "react-icons/fi";
+import { MdClose } from "react-icons/md";
 import avatar from "../../Utils/me2.jpg";
+import { navLinksdata } from "./contacts";
+import Avatar from "@mui/material/Avatar";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
-    <div>
-      <AppBar
-        position="fixed"
-        sx={{
-          boxShadow: 0,
-          bgcolor: "transparent",
-          backgroundImage: "none",
-          mt: 1,
-        }}
-      >
-        <Container maxWidth="lg">
-          <Toolbar
-            variant="regular"
-            sx={(theme) => ({
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              flexShrink: 0,
-              borderRadius: "999px",
-              bgcolor:
-                theme.palette.mode === "light"
-                  ? "rgba(255, 255, 255, 0.4)"
-                  : "rgba(0, 0, 0, 0.4)",
-              backdropFilter: "blur(24px)",
-              maxHeight: 40,
-              border: "1px solid",
-              borderColor: "divider",
-              boxShadow:
-                theme.palette.mode === "light"
-                  ? `0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)`
-                  : "0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)",
-            })}
-          >
-            <Box sx={{ display: { sm: "", md: "none" } }}>
-              <IconButton
-                variant="text"
-                color="primary"
-                aria-label="menu"
-                sx={{ minWidth: "30px", p: "4px" }}
-              >
-                <MenuIcon />
-              </IconButton>
-            </Box>
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-                alignItems: "center",
-                ml: "-18px",
-                px: 0,
-                textDecoration: "none",
-              }}
+    <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
+      <div className="flex items-center gap-2">
+        <Avatar sx={{ ml: 2 }} alt="Remy Sharp" src={avatar} />
+        <h3>Amanuel Tefera</h3>
+      </div>
+      <div>
+        <ul className="hidden mdl:inline-flex items-center gap-6 lg:gap-10">
+          {navLinksdata.map(({ _id, title, link }) => (
+            <li
+              className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+              key={_id}
             >
               <Link
+                activeClass="active"
+                to={link}
+                spy={true}
                 smooth={true}
-                duration={700}
                 offset={-70}
-                to="hero"
-                style={{
-                  textDecoration: "none",
-                  display: "flex",
-                  alignItems: "center",
-                }}
+                duration={500}
               >
-                <Avatar sx={{ ml: 2 }} alt="Remy Sharp" src={avatar} />
-                <Typography
-                  variant="body2"
-                  component="h1"
-                  sx={{
-                    fontFamily: "Sora, sans-serif",
-                    fontWeight: 200,
-                    color: "gray",
-                    marginLeft: "5px",
-                  }}
-                >
-                  Amanuel Tefera
-                </Typography>
+                {title}
               </Link>
-            </Box>
-
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-                gap: 0.5,
-                alignItems: "center",
-              }}
-            >
-              <Link smooth={true} duration={700} offset={-70} to="skill">
-                <Button
-                  color="primary"
-                  variant="text"
-                  size="small"
-                  sx={{
-                    color: "black",
-                    fontWeight: "light",
-                    fontFamily: "sora,sans-serif",
-                  }}
-                >
-                  Skill
-                </Button>
-              </Link>
-              <Link smooth={true} duration={700} offset={-70} to="projects">
-                <Button
-                  color="primary"
-                  variant="text"
-                  size="small"
-                  to="/category"
-                  sx={{
-                    color: "black",
-                    fontWeight: "light",
-                    fontFamily: "sora,sans-serif",
-                  }}
-                >
-                  Projects
-                </Button>
-              </Link>
-              <Link smooth={true} duration={900} offset={-70} to="Contacts">
-                <Button
-                  color="primary"
-                  variant="text"
-                  size="small"
-                  to="/about"
-                  sx={{
-                    color: "black",
-                    fontWeight: "light",
-                    fontFamily: "sora,sans-serif",
-                  }}
-                >
-                  Contact
-                </Button>
-              </Link>
-            </Box>
-          </Toolbar>
-        </Container>
-      </AppBar>
+            </li>
+          ))}
+        </ul>
+        <span
+          onClick={() => setShowMenu(!showMenu)}
+          className="text-xl mdl:hidden bg-black w-10 h-10 inline-flex items-center justify-center rounded-full text-designColor cursor-pointer"
+        >
+          <FiMenu />
+        </span>
+        {showMenu && (
+          <div className="w-[80%] h-screen overflow-scroll absolute top-0 left-0 bg-gray-900 p-4 scrollbar-hide">
+            <div className="flex flex-col gap-8 py-2 relative">
+              <div>
+                <img className="w-32" src={avatar} alt="logo" />
+              </div>
+              <ul className="flex flex-col gap-4">
+                {navLinksdata.map((item) => (
+                  <li
+                    key={item._id}
+                    className="text-base font-normal text-gray-400 tracking-wide cursor-pointer hover:text-designColor duration-300"
+                  >
+                    <Link
+                      onClick={() => setShowMenu(false)}
+                      activeClass="active"
+                      to={item.link}
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col gap-4">
+                <h2 className="text-base uppercase font-titleFont mb-4">
+                  Find me in
+                </h2>
+                <div className="flex gap-4">
+                  <a
+                    href="https://x.com/dev_amanijs"
+                    className="bannerIcon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaXTwitter />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/amanuel-teferais/"
+                    className="bannerIcon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                  <a
+                    href="https://github.com/AmaniTefe"
+                    className="bannerIcon"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub />
+                  </a>
+                </div>
+              </div>
+              <span
+                onClick={() => setShowMenu(false)}
+                className="absolute top-4 right-4 text-gray-400 hover:text-designColor duration-300 text-2xl cursor-pointer"
+              >
+                <MdClose />
+              </span>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -1,125 +1,83 @@
-import React from "react";
-import { Box, Typography } from "@mui/material";
-import Paper from "@mui/material/Paper";
-import { styled } from "@mui/material/styles";
+import Title from "../layouts/Title";
+import { BiLogoHtml5 } from "react-icons/bi";
+import { FaCss3Alt, FaNodeJs, FaReact } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { RiNextjsFill } from "react-icons/ri";
+import { SiExpress, SiMongodb } from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
 
-import react from "../../Utils/react.png";
-import html from "../../Utils/html.png";
-import javascript from "../../Utils/javascript.png";
-import css from "../../Utils/css.png";
-import nodejs from "../../Utils/nodejs.png";
-import mongo from "../../Utils/mongo.png";
-import sql from "../../Utils/sql.png";
-import python from "../../Utils/python.png";
-import php from "../../Utils/php.png";
-
-const Skill = () => {
-  const DemoPaper = styled(Paper)(({ theme }) => ({
-    width: 200,
-    height: 200,
-    padding: theme.spacing(2),
-    ...theme.typography.body2,
-    textAlign: "center",
-    alignContent: "center",
-    display: "inline-block",
-    margin: theme.spacing(1.5),
-  }));
-
-  const skills = [
-    html,
-    css,
-    javascript,
-    react,
-    php,
-    nodejs,
-    sql,
-    mongo,
-    python,
-  ];
-
-  const duplicates = 30;
-  const extendedSkills = Array(duplicates).fill(skills).flat();
-
+const skill = () => {
   return (
-    <Box
+    <section
       id="skill"
-      sx={{
-        textAlign: "center",
-        color: "#ffffff",
-        padding: 5,
-        background: "linear-gradient(to left,white 71%,#177BD1 29%)",
-        overflow: "hidden",
-        position: "relative",
-      }}
+      className=" w-full pt-10 pb-20 flex flex-col  py-20 border-b-[1px] border-b-black"
     >
-      <Typography
-        sx={{ fontFamily: "Sora, sans-serif", fontWeight: "bold" }}
-        color="black"
-        variant="h3"
-        component="h1"
-      >
-        PROGRAMMING{" "}
-        <Typography
-          variant="h3"
-          component="span"
-          sx={{
-            fontFamily: "Sora, sans-serif",
-            fontSize: "inherit",
-            color: "#177BD1",
-            textAlign: "center",
-            fontWeight: "bold",
-          }}
-        >
-          SKILLS
-        </Typography>
-      </Typography>
-      <Box
-        sx={{
-          mt: 3,
-          overflow: "hidden",
-          whiteSpace: "nowrap",
-          position: "relative",
-        }}
-      >
-        <Box
-          sx={{
-            display: "inline-block",
-            animation: "scroll 350s linear infinite",
-          }}
-        >
-          {extendedSkills.map((skill, index) => (
-            <DemoPaper key={index} variant="elevation">
-              <img
-                src={skill}
-                alt={`skill-${index}`}
-                style={{ width: "100%", height: "100%" }}
-              />
-            </DemoPaper>
-          ))}
-        </Box>
-        <Box
-          sx={{
-            position: "absolute",
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-            pointerEvents: "none",
-            background:
-              "linear-gradient(to right, #177BD1 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 90%, white 100%)",
-          }}
-        />
-      </Box>
-      <style>
-        {`
-          @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } // Adjust to cover half of the extended content
-          }
-        `}
-      </style>
-    </Box>
+      <div className=" justify-center items-center text-center">
+        <Title title="" des="PROGRAMMING SKILLS" />
+      </div>
+      <div className=" grid md:grid-cols-2 xl:grid-cols-3  gap-6 xl:gap-14">
+        <div className="w-full p-4 xl:px-5 h-auto xl:py-5 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group ">
+          <div className="flex flex-col gap-4 font-titleFont  items-center">
+            <h2 className="text-designColor font-medium text-2xl">FrontEnd</h2>
+          </div>
+          <div className="ml-5">
+            <ul className="list">
+              <li className="flex just items-center gap-2">
+                <BiLogoHtml5 /> HTML5
+              </li>
+              <li className="flex just items-center gap-2">
+                <FaCss3Alt />
+                CSS3
+              </li>
+              <li className="flex just items-center gap-2">
+                <IoLogoJavascript />
+                JavaScript
+              </li>
+              <li className="flex just items-center gap-2">
+                <FaReact />
+                React
+              </li>
+              <li className="flex just items-center gap-2">
+                <RiNextjsFill />
+                NextJS
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="w-full p-4 xl:px-5 h-auto xl:py-5 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group ">
+          <div className="flex flex-col gap-4 font-titleFont  items-center">
+            <h2 className="text-designColor font-medium text-2xl">BackEnd</h2>
+          </div>
+          <div className="ml-5">
+            <ul>
+              <li className="flex just items-center gap-2">
+                <FaNodeJs />
+                NODEJS
+              </li>
+              <li className="flex just items-center gap-2">
+                <SiExpress />
+                EXPRESSJS
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="w-full p-4 xl:px-5 h-auto xl:py-5 rounded-lg shadow-shadowOne flex flex-col bg-gradient-to-r from-bodyColor to-[#202327] group ">
+          <div className="flex flex-col gap-4 font-titleFont  items-center">
+            <h2 className="text-designColor font-medium text-2xl">DataBase</h2>
+          </div>
+          <div className="ml-5">
+            <ul>
+              <li className="flex just items-center gap-2">
+                <GrMysql /> MYSQL
+              </li>
+              <li className="flex just items-center gap-2">
+                <SiMongodb /> MongoDB
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
-
-export default Skill;
+export default skill;

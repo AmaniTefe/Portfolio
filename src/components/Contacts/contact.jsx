@@ -1,56 +1,50 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button, IconButton, Stack } from "@mui/material";
 import React from "react";
-import FacebookIcon from "@mui/icons-material/GitHub";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import TwitterIcon from "@mui/icons-material/X";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import Stack from "@mui/material/Stack";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
-import CopyrightIcon from "@mui/icons-material/Copyright";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
 const Contact = () => {
   return (
     <Box
-      id="Contacts"
+      id="contact"
       sx={{
         textAlign: "center",
-        color: "#ffffff",
         padding: 5,
-        background: "#E5E4E2",
         overflow: "hidden",
         position: "relative",
       }}
     >
       <Box
         sx={{
-          flexDirection: { xs: "column", sm: "row" },
+          display: "flex",
+          flexDirection: { xs: "column" },
           width: "100%",
           justifyContent: "space-between",
+          alignItems: "center",
+          gap: 3,
         }}
       >
         <Typography
           variant="h2"
-          sx={{ fontFamily: "Lobster", fontWeight: "bold" }}
-          color="black"
+          sx={{
+            fontFamily: "Lobster",
+            fontWeight: "bold",
+            fontSize: { xs: "1.5rem", sm: "2rem", md: "2.5rem" },
+            color: "white",
+          }}
           component="h1"
         >
-          INTERESTED IN WORKING
-        </Typography>
-        <Typography
-          variant="h2"
-          sx={{ fontFamily: "Lobster", fontWeight: "bold" }}
-          color="#177BD1"
-          component="h1"
-        >
-          WITH ME?
+          INTERESTED IN WORKING WITH ME?
         </Typography>
         <Button
           size="large"
           endIcon={<EmailIcon />}
           component="a"
           href="mailto:s.tefera.amanuel@gmail.com"
+          sx={{ mt: { xs: 2, sm: 0 }, color: "#177BD1" }}
         >
           Get in Touch
         </Button>
@@ -58,121 +52,62 @@ const Contact = () => {
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: "space-between",
           width: "100%",
           borderTop: "1px solid",
           borderColor: "divider",
+          mt: 5,
+          pt: 3,
         }}
       >
-        <Box sx={{ mt: 3, textAlign: "start", ml: "10%" }}>
+        <Box
+          sx={{
+            textAlign: { xs: "center", md: "start" },
+            mb: { xs: 3, md: 0 },
+          }}
+        >
           <Typography
             sx={{
               fontFamily: "Sora, sans-serif",
               fontWeight: "bold",
-              textAlig: "center",
-              ml: "10%",
+              fontSize: { xs: "1.25rem", sm: "1.5rem" },
+              color: "white",
             }}
-            color="black"
-            variant="h3"
-            component="h1"
-            target="_blank"
+            component="h2"
           >
             CONTACT
           </Typography>
-          <Typography
-            sx={{ fontFamily: "Sora, sans-serif", fontWeight: "bold" }}
-            color="black"
-            variant="body2"
-            component="h1"
-          >
+          <p className="text-lg font-bold text-designColor">
             Name:{" "}
-            <Typography
-              variant="h3"
-              component="span"
-              sx={{
-                fontFamily: "Sora, sans-serif",
-                fontSize: "inherit",
-                color: "#177BD1",
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
-            >
-              Amanuel Tefera Seifu
-            </Typography>
-          </Typography>
-          <Typography
-            sx={{ fontFamily: "Sora, sans-serif", fontWeight: "bold" }}
-            color="black"
-            variant="body2"
-            component="h1"
-          >
+            <span className="font-medium text-white ">Amanuel Tefera</span>
+          </p>
+          <p className="text-lg font-bold text-designColor">
             Tele:{" "}
-            <Typography
-              variant="h3"
-              component="span"
-              sx={{
-                fontFamily: "Sora, sans-serif",
-                fontSize: "inherit",
-                color: "#177BD1",
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
-            >
-              +25194-554-63-73
-            </Typography>
-          </Typography>
-
-          <Typography
-            sx={{ fontFamily: "Sora, sans-serif", fontWeight: "bold" }}
-            color="black"
-            variant="body2"
-            component="h1"
-          >
+            <span className="font-medium text-white ">+2519-45-54-6373</span>
+          </p>
+          <p className="text-lg font-bold text-designColor">
             Email:{" "}
-            <Typography
-              variant="h3"
-              sx={{
-                fontFamily: "Sora, sans-serif",
-                fontSize: "inherit",
-                color: "#177BD1",
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
+            <a
+              className="font-medium text-white "
               component="a"
               href="mailto:s.tefera.amanuel@gmail.com"
-              target="_blank"
             >
               s.tefera.amanuel@gmail.com
-            </Typography>
-          </Typography>
-          <Typography
-            sx={{ fontFamily: "Sora, sans-serif", fontWeight: "bold" }}
-            color="black"
-            variant="body2"
-            component="h1"
-          >
+            </a>
+          </p>
+          <p className="text-lg font-bold text-designColor">
             Address:{" "}
-            <Typography
-              variant="h3"
-              component="span"
-              sx={{
-                fontFamily: "Sora, sans-serif",
-                fontSize: "inherit",
-                color: "#177BD1",
-                textAlign: "center",
-                fontWeight: "bold",
-              }}
-            >
+            <span className="font-medium text-white ">
               Addis Ababa, Ethiopia
-            </Typography>
-          </Typography>
+            </span>
+          </p>
         </Box>
-        <Box sx={{ mt: 2, mr: "10%" }}>
+        <Box>
           <Stack
             direction="row"
-            justifyContent="right"
+            justifyContent="center"
             spacing={1}
-            useFlexGap
             sx={{
               color: "text.secondary",
             }}
@@ -181,16 +116,16 @@ const Contact = () => {
               color="inherit"
               href="https://github.com/AmaniTefe"
               aria-label="GitHub"
-              sx={{ alignSelf: "center" }}
+              sx={{ color: "white" }}
               target="_blank"
             >
-              <FacebookIcon />
+              <GitHubIcon />
             </IconButton>
             <IconButton
               color="inherit"
               href="https://x.com/dev_amanijs"
-              aria-label="X"
-              sx={{ alignSelf: "center" }}
+              aria-label="Twitter"
+              sx={{ color: "white" }}
               target="_blank"
             >
               <TwitterIcon />
@@ -199,7 +134,7 @@ const Contact = () => {
               color="inherit"
               href="https://www.linkedin.com/in/amanuel-teferais/"
               aria-label="LinkedIn"
-              sx={{ alignSelf: "center" }}
+              sx={{ color: "white" }}
               target="_blank"
             >
               <LinkedInIcon />
@@ -207,28 +142,13 @@ const Contact = () => {
             <IconButton
               color="inherit"
               href="https://www.instagram.com/amani.tefera"
-              aria-label="LinkedIn"
-              sx={{ alignSelf: "center" }}
+              aria-label="Instagram"
+              sx={{ color: "white" }}
               target="_blank"
             >
               <InstagramIcon />
             </IconButton>
           </Stack>
-          <Box sx={{ display: "flex", ml: 1.3 }}>
-            <CopyrightIcon sx={{ color: "gray" }} />
-            <Typography
-              sx={{
-                fontFamily: "Sora, sans-serif",
-                fontSize: "inherit",
-                color: "gray",
-                textAlign: "center",
-                fontWeight: "light",
-                ml: 0.2,
-              }}
-            >
-              Portfolio, 2024
-            </Typography>
-          </Box>
         </Box>
       </Box>
     </Box>
