@@ -5,6 +5,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import EmailIcon from "@mui/icons-material/Email";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Contact = () => {
   return (
@@ -130,7 +131,7 @@ const Contact = () => {
               sx={{ color: "white" }}
               target="_blank"
             >
-              <TwitterIcon />
+              <FaXTwitter />
             </IconButton>
             <IconButton
               className="hover:text-designColor hover:-translate-y-1"
