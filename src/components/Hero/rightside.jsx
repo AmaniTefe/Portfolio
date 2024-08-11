@@ -1,5 +1,5 @@
 import React from "react";
-import me from "../../Utils/mecopy.png";
+import me from "../../Utils/mine.jpg";
 
 const RightBanner = () => {
   return (
