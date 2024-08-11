@@ -135,7 +135,7 @@ const Contact = () => {
             <IconButton
               className="hover:text-designColor hover:-translate-y-1"
               color="inherit"
-              href="https://www.linkedin.com/in/amanuel-teferais/"
+              href="https://www.linkedin.com/in/amanuel-tefera"
               aria-label="LinkedIn"
               sx={{ color: "white" }}
               target="_blank"

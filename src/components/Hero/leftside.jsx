@@ -50,7 +50,7 @@ const LeftBanner = () => {
               <FaXTwitter />
             </a>
             <a
-              href="https://www.linkedin.com/in/amanuel-teferais/"
+              href="https://www.linkedin.com/in/amanuel-tefera/"
               className="bannerIcon"
               target="_blank"
               rel="noopener noreferrer"
