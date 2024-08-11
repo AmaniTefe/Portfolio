@@ -113,6 +113,7 @@ const Contact = () => {
             }}
           >
             <IconButton
+              className="hover:text-designColor"
               color="inherit"
               href="https://github.com/AmaniTefe"
               aria-label="GitHub"
@@ -122,6 +123,7 @@ const Contact = () => {
               <GitHubIcon />
             </IconButton>
             <IconButton
+              className="hover:text-designColor"
               color="inherit"
               href="https://x.com/dev_amanijs"
               aria-label="Twitter"
@@ -131,6 +133,7 @@ const Contact = () => {
               <TwitterIcon />
             </IconButton>
             <IconButton
+              className="hover:text-designColor"
               color="inherit"
               href="https://www.linkedin.com/in/amanuel-teferais/"
               aria-label="LinkedIn"
@@ -140,6 +143,7 @@ const Contact = () => {
               <LinkedInIcon />
             </IconButton>
             <IconButton
+              className="hover:text-designColor"
               color="inherit"
               href="https://www.instagram.com/amani.tefera"
               aria-label="Instagram"
