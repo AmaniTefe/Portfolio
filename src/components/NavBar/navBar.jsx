@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="w-full h-24 sticky top-0 z-50 bg-bodyColor mx-auto flex justify-between items-center font-titleFont border-b-[1px] border-b-gray-600">
       <div className="flex items-center gap-2">
-        <Avatar sx={{ ml: 2 }} alt="Remy Sharp" src={avatar} />
+        <Avatar sx={{ ml: 2 }} alt="Amanuel Tefera" src={avatar} />
         <h3>Amanuel Tefera</h3>
       </div>
       <div>
